@@ -1,0 +1,39 @@
+<p>movices works!</p>
+<table>
+    <thead>
+        <th>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Married</th>
+                <th>Salary</th>
+                <th>Country</th>
+                <th>City</th>
+            </tr>
+        </th>
+    </thead>
+    <tbody>
+        <tr *ngFor ='let user of users'>
+            <td>    
+                {{  user.name }}
+            </td>
+            <td>
+                {{ user.age }}
+            </td>
+            <td *ngIf='user.married'>
+                {{ user.married }}
+                
+            </td>
+        
+            <td>
+                {{  user.salary }}
+            </td>
+            <td>
+                {{  user.country }}
+            </td>
+            <td>
+                {{  user.city }}
+            </td>
+        </tr>
+    </tbody>
+</table>
