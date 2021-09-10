@@ -12,7 +12,16 @@ import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import {  HttpClientModule } from '@angular/common/http';
+import { PepoleComponent } from './pepole/pepole.component';
+import { HomeheaderComponent } from './homeheader/homeheader.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { TvDetailsComponent } from './tv-details/tv-details.component';
+import { PersonDetailsComponent } from './person-details/person-details.component';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +33,21 @@ import { FooterComponent } from './footer/footer.component';
     RegisterComponent,
     NotfoundComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    PepoleComponent,
+    HomeheaderComponent,
+    MovieDetailsComponent,
+    TvDetailsComponent,
+    PersonDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
