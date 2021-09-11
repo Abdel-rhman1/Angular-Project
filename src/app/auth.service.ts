@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   currentUser = new BehaviorSubject(null);
+  loginedUser:string = "";
+  loginedUserForLogin:string="";
   constructor(private _HttpsClient:HttpClient , private _Router:Router) {
     if(localStorage.getItem("userToken")!=null){
       this.saveCurrentUser();
@@ -26,7 +28,9 @@ export class AuthService {
   saveCurrentUser(){
     let token:any = localStorage.getItem("userToken");
     this.currentUser.next(jwtDecode(token));
-    //console.log("Auth Object" + this.currentUser);
+   this.loginedUserForLogin = this.currentUser.value?.['first_name'][0] +''+
+   this.currentUser.value?.['last_name'][0];
+   this.loginedUser = this.currentUser.value?.['first_name']+'';
   }
   logout(){
     localStorage.removeItem("userToken");

@@ -1,4 +1,6 @@
 section{
     background-image: url('../../assets/maxresdefault.jpg');
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }

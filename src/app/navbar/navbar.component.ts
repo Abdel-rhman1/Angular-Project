@@ -9,11 +9,13 @@ export class NavbarComponent implements OnInit {
 
 
   isLogin:boolean = false;
+  LoginedUser:string="";
   userName:string = '';
   constructor(private _AuthService:AuthService) {
     _AuthService.currentUser.subscribe(()=>{
       if(_AuthService.currentUser.getValue()!=null){
         this.isLogin = true;
+        this.LoginedUser = _AuthService.loginedUserForLogin;
         // console.log(_AuthService.currentUser.getValue()?.first_name);
         // this.userName = _AuthService.currentUser.getValue()?.first_name?.slice(0,1);
       }else{

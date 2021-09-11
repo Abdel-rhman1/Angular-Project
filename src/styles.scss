@@ -21,6 +21,7 @@ a{
     font-size: 18px;
     color:$fontColor;
     text-decoration: none;
+    cursor: pointer;
 }
 a:hover{
     font-size: 18px;
@@ -34,6 +35,7 @@ a:hover{
 
 .second-color{
     color:$secondFontColor;
+    
 }
 .votAvg{
     background-color: $lightBgColor;

@@ -46,7 +46,12 @@
             <a class="nav-link" routerLink="register">Register</a>
           </li>
           <li *ngIf="isLogin" class="nav-item">
-            <a class="nav-link" routerLink="settings">Setting</a>
+            <a class="nav-link" routerLink="settings">
+              <span class="" style="border-radius: 50%; border:1px solid #eee">
+                {{ LoginedUser }}
+              </span>
+             
+            </a>
           </li>
           <li *ngIf="isLogin" class="nav-item">
             <a class="nav-link" (click)="islogout()">Logout</a>
